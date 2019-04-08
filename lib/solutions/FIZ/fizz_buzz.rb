@@ -4,6 +4,8 @@ class FizzBuzz
     # fbstring = fizz(number) + buzz(number)
     fbstring = check_fb(3,number,'fizz')
     fbstring += check_fb(5,number,' buzz')
+    num_int = number.to_s[0].to_i
+    fbstring += check_same_num(num_int,number)
     fbstring.strip!
     if fbstring.length.zero?
       number.to_s
@@ -27,5 +29,6 @@ class FizzBuzz
       ' '
     end
 end
+
 
 
