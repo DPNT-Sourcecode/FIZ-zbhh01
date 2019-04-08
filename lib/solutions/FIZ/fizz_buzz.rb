@@ -4,8 +4,10 @@ class FizzBuzz
     fb_string = get_fizz_buzz_string(number)
     deluxe_string = get_deluxe_string(number)
     return_string = fb_string + deluxe_string
-    return_string.gsub(/\s+/, " ")
+    return_string.sub(" ", "*")
+    p 1
     p return_string
+    p 2
     return_string.strip!
     if return_string.length.zero?
       number.to_s
@@ -50,6 +52,7 @@ class FizzBuzz
     output_string
   end
 end
+
 
 
 
