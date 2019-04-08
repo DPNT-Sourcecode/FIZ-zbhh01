@@ -18,7 +18,7 @@ class FizzBuzz
     fbstring += check_fizz_buzz(5, number, ' buzz')
     fbstring
   end
-  def check_deluxe_string(number)
+  def get_deluxe_string(number)
     fbstring = check_deluxe(3, number)
     fbstring += check_deluxe(5, number)
     fbstring
@@ -51,18 +51,5 @@ class FizzBuzz
     end
     output_string
   end
-
-  def get_old_deluxe_string(input_number)
-    output_string = ' '
-    check_num = input_number.to_s[0]
-    number_of_check_nums = input_number.to_s.count check_num
-    if input_number > 10 &&
-      (input_number.to_s.length == number_of_check_nums)
-      output_string = ' deluxe'
-      if input_number.odd?
-        output_string = ' fake deluxe'
-      end
-    end
-    output_string
-  end
 end
+
