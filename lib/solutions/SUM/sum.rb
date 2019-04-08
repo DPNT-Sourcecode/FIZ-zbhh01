@@ -6,15 +6,17 @@
 class Sum
 
   def sum(x, y)
-    return in_range(x) + in_range(y)
+     in_range(x) + in_range(y)
   end
 
   def in_range(num)
     if (num <= 0 && num >= 100)
       raise ('numbers need to be between 0 & 100')
     end
+    return num
   end
 end
+
 
 
 
