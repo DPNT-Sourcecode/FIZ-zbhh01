@@ -1,9 +1,9 @@
 # noinspection RubyUnusedLocalVariable
 class FizzBuzz
   def fizz_buzz(number)
-    fb_string = get_fizz_buzz_string(number)
-    deluxe_string = get_deluxe_string(number)
-    return_string = fb_string + deluxe_string
+    p fb_string = get_fizz_buzz_string(number)
+    p deluxe_string = get_deluxe_string(number)
+    p return_string = fb_string + deluxe_string
     return_string.strip!
     return_string.sub!('  ', ' ')
     if return_string.length.zero?
@@ -35,8 +35,9 @@ class FizzBuzz
   # number repeated
   # Returns fake deluxe if the number is odd
   def get_deluxe_string(input_number)
-    if input_number.to_s.count.include? '3' ||
-      input_number.to_s.count.include? '5' 
+      output_string = ' '
+      if (input_number.to_s.include? '3') ||
+      (input_number.to_s.include? '5')
       output_string = ' deluxe'
       if input_number.odd?
         output_string = ' fake deluxe'
@@ -58,5 +59,6 @@ class FizzBuzz
     output_string
   end
 end
+
 
 
