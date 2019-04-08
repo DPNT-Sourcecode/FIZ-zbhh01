@@ -38,6 +38,8 @@ class FizzBuzz
     output_string = ' '
     if (input_number % check_number).zero?
       output_string = input_string
+      # check for deluxe
+       output_string += check_deluxe(check_number, input_number)
     end
     output_string
   end
@@ -58,5 +60,6 @@ class FizzBuzz
     output_string
   end
 end
+
 
 
