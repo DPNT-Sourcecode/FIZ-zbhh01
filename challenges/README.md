@@ -19,4 +19,14 @@ Challenge time for SUM is ==> 34 min + 0 min penalty = 34 min total time (207126
 
 
 ## Challenge 2
+In order to complete the round you need to implement the following method:
+     hello(String) -> String
+
+Where:
+ - param[0] = a String. Ignore for now.
+ - @return = a String containing a message
+
+ There is no test so I will write that first
+ 
+
 
