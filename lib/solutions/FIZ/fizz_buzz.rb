@@ -1,9 +1,9 @@
 # noinspection RubyUnusedLocalVariable
 class FizzBuzz
   def fizz_buzz(number)
-    fbstring = get_fb_string(number)
+    fbstring = get_fizz_buzz_string(number)
     fbstring.strip!
-    fbstring += check_same_num(number)
+    fbstring += check_deluxe(number)
     fbstring.strip!
 
     if fbstring.length.zero?
@@ -13,16 +13,16 @@ class FizzBuzz
     end
   end
 
-  def get_fb_string(number)
-    fbstring = check_fb(3, number, 'fizz')
-    fbstring += check_fb(5, number, ' buzz')
+  def get_fizz_buzz_string(number)
+    fbstring = check_fizz_buzz(3, number, 'fizz')
+    fbstring += check_fizz_buzz(5, number, ' buzz')
     fbstring
   end
 
   # Return the string supplied if the input_number is divisible
   # by the check_number, or the check_number is contained in the
   # input_number
-  def check_fb(check_number, input_number, output_string)
+  def check_fizz_buzz(check_number, input_number, output_string)
     if (input_number % check_number).zero? ||
        (input_number.to_s.include? check_number.to_s)
       output_string
@@ -33,7 +33,7 @@ class FizzBuzz
 
   # Return the string deluxe if the input_number is the same
   # number repeated
-  def check_same_num(input_number)
+  def check_deluxe(input_number)
     return_str = ' '
     check_num = input_number.to_s[0]
     if (input_number > 10 &&
@@ -44,3 +44,4 @@ class FizzBuzz
     end
   end
 end
+
