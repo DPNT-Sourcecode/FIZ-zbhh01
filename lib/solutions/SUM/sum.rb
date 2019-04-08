@@ -16,8 +16,3 @@ class Sum
     return num
   end
 end
-
-
-
-
-
