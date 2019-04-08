@@ -1,4 +1,4 @@
-require './lib/solutions/HLO/hello.rb'
+require './lib/solutions/HLO/hello2.rb'
 
 describe Hello2 do
 
