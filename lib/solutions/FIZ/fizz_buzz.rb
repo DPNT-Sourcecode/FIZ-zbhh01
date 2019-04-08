@@ -20,9 +20,7 @@ class FizzBuzz
   end
 
   def fizz_buzz(number)
-    p 1
-    p @fizz_marker = check_fizz_buzz(FIZZ_NUM, number)
-    p 2
+    @fizz_marker = check_fizz_buzz(FIZZ_NUM, number)
     if @fizz_marker
       @deluxe_marker = check_deluxe(FIZZ_NUM,number)
     end
@@ -52,7 +50,7 @@ class FizzBuzz
   def make_string(number)
     output_str = ''
     if @fizz_marker
-      p output_str += FIZZ_STR
+      output_str += FIZZ_STR
     end
     if @buzz_marker
       output_str += ' ' +  BUZZ_STR
@@ -71,6 +69,7 @@ class FizzBuzz
     output_str
   end
 end
+
 
 
 
