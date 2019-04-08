@@ -59,4 +59,3 @@ Let's change the rules a little bit:
 
 First I comment out/remove the tests that will fail with this new requirement
 I will then write the test for 3 and then 5 and then both
-

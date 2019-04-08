@@ -23,8 +23,3 @@ describe FizzBuzz do
     expect(subject.fizz_buzz(53)).to eq('fizz buzz')
   end
 end
-
-
-
-
-
