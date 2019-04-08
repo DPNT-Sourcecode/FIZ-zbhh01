@@ -67,4 +67,3 @@ It goes like this, we are going to add a new rule:
   - A number can be "fizz", "buzz" and "deluxe" at the same time. If this happens then write "fizz buzz deluxe"
 
   Testing, will start with 77 as it is not divisible by 3 or 5, I will then test 55 and 33 and then move onto 3 digit numbers
-
