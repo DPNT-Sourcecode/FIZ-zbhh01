@@ -1,8 +1,9 @@
-require './lib/solutions/HLO/hello.rb'
+require './lib/solutions/FIZ/fizz_buzz.rb'
 
-describe Hello do
+describe FizzBuzz do
 
-  it 'App should say Hello Kate!' do
-    expect(subject.hello('Kate')).to eq("Hello, Kate!")
+  it 'App should return the string 1 when given the number 1'   do
+    expect(subject.fizz_buzz(1)).to eq('1')
   end
 end
+

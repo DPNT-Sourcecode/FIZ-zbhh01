@@ -33,4 +33,26 @@ Where:
  ## Challenge 3
  You are given the name of a friend. Say hello to them!
  Example: if name of friend is "John" than return "Hello, John!".
- 
+
+
+ ## Challenge 4
+ A single number FizzBuzz converter.
+ FIZ_R1
+ ROUND 1 - Fizz Buzz
+ You are given a number. You have to follow the following rules:
+   - If the number is a multiple of three then you should write "fizz"
+   - If the number is a multiple of five then you should write "buzz"
+   - If the number is a multiple of both three and five then you should write "fizz buzz"
+   - If the number is not a multiple of five or three then write the number, example 1
+
+ Notes:
+  - You do not have to test for illegal input.
+  - The input numbers are between 1-9999
+
+ In order to complete the round you need to implement the following method:
+      fizz_buzz(Integer) -> String
+
+ Where:
+  - param[0] = an Integer between 1-9999
+  - @return = a String containing either the number, "fizz", "buzz" or "fizz buzz"
+
