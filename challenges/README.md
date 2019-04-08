@@ -50,7 +50,6 @@ First I will test for a number then for fizz, then buzz, then fizzbuzz and then 
 I also ran rubocop on this one
 
 ## Challenge 5
-FIZ_R2
 ROUND 2 - Fizz Buzz variation
 Let's change the rules a little bit:
   - A number is "fizz" if it is divisible by 3 or if it has a 3 in it
@@ -59,3 +58,13 @@ Let's change the rules a little bit:
 
 First I comment out/remove the tests that will fail with this new requirement
 I will then write the test for 3 and then 5 and then both
+
+## Challenge 6
+ROUND 3 - Fizz Buzz Deluxe
+People like "fizz buzz" but the upper class of the society wants more. Let's create a "Deluxe" version !
+It goes like this, we are going to add a new rule:
+  - A number is considered to be "deluxe" if it is greater than 10 and all the digits are identical
+  - A number can be "fizz", "buzz" and "deluxe" at the same time. If this happens then write "fizz buzz deluxe"
+
+  Testing, will start with 77 as it is not divisible by 3 or 5, I will then test 55 and 33 and then move onto 3 digit numbers
+

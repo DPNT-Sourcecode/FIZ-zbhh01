@@ -12,13 +12,11 @@ class FizzBuzz
 
   def fizz(number)
     if (number % 3).zero? || (number.to_s.include? '3')
-     'fizz'
+      'fizz'
     else
       ' '
     end
-
   end
-
   def buzz(number)
     if (number % 5).zero? || (number.to_s.include? '5')
       ' buzz'
@@ -27,5 +25,6 @@ class FizzBuzz
     end
   end
 end
+
 
 
