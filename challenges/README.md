@@ -106,4 +106,3 @@ This requires some thought
 3. if num is divisible by both then string is fizz and Buzz
 4. if num contains x ( the same x it is divisible by) then it is fizz/buzz/fizz buzz deluxe
 5. if num is deluxe and odd then it is fizz/buzz/fizz buzz fake deluxe
-
