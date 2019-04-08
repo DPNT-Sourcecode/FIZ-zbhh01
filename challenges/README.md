@@ -1,1 +1,10 @@
 This folder will contain challenge descriptions.
+
+## Challenge 1
+- param[0] = a positive integer between 0-100
+- param[1] = a positive integer between 0-100
+- @return = an Integer representing the sum of the two numbers
+
+The test has already been written and I can see that is fails
+I will now implement the code
+
