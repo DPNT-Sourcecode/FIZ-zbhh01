@@ -28,5 +28,10 @@ Where:
 
  There is no test so I will write that first
  I have chosen to use rspec instead of rake test as I am more familiar with the test nomenclature
- 
+ Note that the spec was unclear, but this information was there, so I must read it properly
+
+ ## Challenge 3
+ You are given the name of a friend. Say hello to them!
+ Example: if name of friend is "John" than return "Hello, John!".
+
 
