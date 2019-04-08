@@ -1,20 +1,16 @@
 # noinspection RubyUnusedLocalVariable
 class FizzBuzz
   def fizz_buzz(number)
-    fbstring = get_fizz_buzz_string(number)
-    deluxestring = get_deluxe_string(number)
-    p 1
-    p fbstring
-    p 2
-    p deluxestring
-    p 3
-    fbstring += deluxestring
-    fbstring.sub('  ',' ')
-    fbstring.strip!
-    if fbstring.length.zero?
+    fb_string = get_fizz_buzz_string(number)
+    deluxe_string = get_deluxe_string(number)
+    return_string = fb_string + deluxe_string
+    return_string.sub('  ',' ')
+    p return_string
+    return_string.strip!
+    if return_string.length.zero?
       number.to_s
     else
-      fbstring.strip!
+      return_string
     end
   end
 
@@ -54,6 +50,7 @@ class FizzBuzz
     output_string
   end
 end
+
 
 
 
