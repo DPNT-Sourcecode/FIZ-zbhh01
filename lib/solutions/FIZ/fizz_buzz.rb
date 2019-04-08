@@ -1,5 +1,17 @@
 # noinspection RubyUnusedLocalVariable
 class FizzBuzz
+  attr_reader:
+  :fizz_num = 3,
+  :buzz_num = 5,
+  :fizz_marker = false,
+  :buzz_marker = false,
+  :deluxe_marker = false,
+  :fake_marker = false,
+  :fizz_str = 'fizz',
+  :buzz_str = 'buzz',
+  :deluxe_str = 'deluxe',
+  :fake_str = 'fake'
+  
   def initialize
     fizz_num = 3
     buzz_num = 5
@@ -32,7 +44,7 @@ class FizzBuzz
   # Return true if the input_number is divisible
   # by the check_number
   def check_fizz_buzz(check_number, input_number)
-    input_number % check_number).zero?
+    (input_number % check_number).zero?
   end
   # Return true if the input_number is contained
   # in the check_number
@@ -56,8 +68,9 @@ class FizzBuzz
     if fake_marker
       fake_str += ' ' + buzz_str
     end
-    output_str       
+    output_str
   end
 end
+
 
 
