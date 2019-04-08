@@ -3,7 +3,7 @@ class FizzBuzz
   def fizz_buzz(number)
     fbstring = get_fb_string(number)
     fbstring.strip!
-    fbstring += check_same_num(number.to_s[0].to_i,number)
+    fbstring += check_same_num(number)
     fbstring.strip!
     if fbstring.length.zero?
       number.to_s
@@ -22,15 +22,16 @@ class FizzBuzz
   # by the check_number, or the check_number is contained in the
   # input_number
   def check_fb(check_number, input_number, output_string)
-    if ((input_number % check_number).zero?
-       || (input_number.to_s.include? check_number.to_s))
+    if (input_number % check_number).zero? ||
+       (input_number.to_s.include? check_number.to_s))
       output_string
     else
       ' '
     end
   end
 
-
+  # Return the string 'deluxe' if the input_number is the same
+  # number repeated
   def check_same_num(check_number, input_number)
     if input_number > 10 &&
       (input_number.to_s.length ==
@@ -41,6 +42,7 @@ class FizzBuzz
     end
   end
 end
+
 
 
 
