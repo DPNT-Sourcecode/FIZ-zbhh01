@@ -32,7 +32,7 @@ class FizzBuzz
         fake_marker = check_fake(number)
       end
     end
-    make_string
+    make_string(number)
   end
 
   # Return true if the input_number is divisible
@@ -62,11 +62,12 @@ class FizzBuzz
     if fake_marker
       output_str += ' ' + FAKE_STR
     end
-    if fizz_marker + buzz_marker + deluxe_marker + fake_marker
+    if !fizz_marker && !buzz_marker && !deluxe_marker && !fake_marker
       output_str = number.to_s
     end
     output_str
   end
 end
+
 
 
