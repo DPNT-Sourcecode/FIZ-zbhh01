@@ -33,15 +33,19 @@ class FizzBuzz
 
   # Return the string deluxe if the input_number is the same
   # number repeated
+  # Returns fake deluxe if the number is odd
   def check_deluxe(input_number)
-    return_str = ' '
     check_num = input_number.to_s[0]
     if (input_number > 10 &&
       (input_number.to_s.length == (input_number.to_s.count check_num)))
         ' deluxe'
+        if input_number.odd?
+          ' fake deluxe'
+        end
     else
         ''
     end
   end
 end
+
 

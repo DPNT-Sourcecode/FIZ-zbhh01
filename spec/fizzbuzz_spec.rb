@@ -49,5 +49,9 @@ describe FizzBuzz do
   it 'App should return the string deluxe when given the number 5555' do
     expect(subject.fizz_buzz(5555)).to eq('buzz fake deluxe')
   end
+  it 'App should return the string deluxe when given the number 4444' do
+    expect(subject.fizz_buzz(5555)).to eq('deluxe')
+  end
 end
+
 
