@@ -11,10 +11,11 @@ class Sum
 
   def in_range(num)
     if (num <= 0 && num >= 100)
-      raise_error ('numbers need to be between 0 & 100')
+      raise ('numbers need to be between 0 & 100')
     end
   end
 end
+
 
 
 
