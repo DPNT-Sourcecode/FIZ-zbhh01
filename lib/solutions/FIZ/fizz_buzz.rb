@@ -2,15 +2,8 @@
 class FizzBuzz
   def fizz_buzz(number)
     # check 3 fizz and deluxe and Fake
-    fbstring = check_fizz_buzz(3, number, 'fizz')
-
-
-
-
-
-    fb_string = get_fizz_buzz_string(number)
-    deluxe_string = get_deluxe_string(number)
-    return_string = fb_string + deluxe_string
+    return_string = check_fizz_buzz(3, number, 'fizz')
+    return_string += check_fizz_buzz(5, number, 'buzz')
     return_string.strip!
     return_string.sub!('  ', ' ')
     if return_string.length.zero?
@@ -34,7 +27,7 @@ class FizzBuzz
   # Return the string supplied if the input_number is divisible
   # by the check_number, or the check_number is contained in the
   # input_number
-  def basic_check_fizz_buzz(check_number, input_number, input_string)
+  def check_fizz_buzz(check_number, input_number, input_string)
     output_string = ' '
     if (input_number % check_number).zero?
       output_string = input_string
@@ -60,6 +53,7 @@ class FizzBuzz
     output_string
   end
 end
+
 
 
 
