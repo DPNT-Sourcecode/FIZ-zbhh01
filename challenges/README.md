@@ -98,5 +98,3 @@ It goes like this, we are going to add a new rule:
     Old Deluxe is all of the numbers the same
     A new deluxe is divisible by x and contains x (x is 3 or 5)
     fake deluxe is if it is deluxe AND odd
-
-

@@ -18,6 +18,11 @@ class FizzBuzz
     fbstring += check_fizz_buzz(5, number, ' buzz')
     fbstring
   end
+  def check_deluxe_string(number)
+    fbstring = check_deluxe(3, number)
+    fbstring += check_deluxe(5, number)
+    fbstring
+  end
 
   # Return the string supplied if the input_number is divisible
   # by the check_number, or the check_number is contained in the
@@ -34,17 +39,19 @@ class FizzBuzz
   # Return the string deluxe if the input_number is the same
   # number repeated
   # Returns fake deluxe if the number is odd
-  def get_deluxe_string(input_number)
-      output_string = ' '
-      if (input_number.to_s.include? '3') ||
-      (input_number.to_s.include? '5')
+  # New rules, has to be divisible by x and contain x where x is 3 or 5
+  def check_deluxe(check_number, input_number)
+    output_string = ' '
+    if (input_number % check_number).zero? &&
+       (input_number.to_s.include? check_number.to_s)
       output_string = ' deluxe'
-      if input_number.odd?
-        output_string = ' fake deluxe'
-      end
+    end
+    if input_number.odd?
+      output_string = ' fake deluxe'
     end
     output_string
   end
+
   def get_old_deluxe_string(input_number)
     output_string = ' '
     check_num = input_number.to_s[0]
@@ -59,6 +66,3 @@ class FizzBuzz
     output_string
   end
 end
-
-
-

@@ -61,6 +61,3 @@ describe FizzBuzz do
     expect(subject.fizz_buzz(4444)).to eq('4444')
   end
 end
-
-
-
