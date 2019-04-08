@@ -18,8 +18,11 @@ class FizzBuzz
     return fbstring
   end
 
+  # Return the string supplied if the input_number is divisible
+  # by the check_number, or the check_number is contained in the
+  # input_number
   def check_fb(check_number, input_number, output_string)
-    if (input_number % check_number).zero?
+    if ((input_number % check_number).zero?
        || (input_number.to_s.include? check_number.to_s))
       output_string
     else
@@ -38,6 +41,7 @@ class FizzBuzz
     end
   end
 end
+
 
 
 
