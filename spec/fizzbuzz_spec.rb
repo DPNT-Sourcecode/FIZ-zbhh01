@@ -4,9 +4,9 @@ describe FizzBuzz do
   it 'App should return the string 1 when given the number 1' do
     expect(subject.fizz_buzz(1)).to eq('1')
   end
-  # it 'App should return the string fizz when given the number 3' do
-  #   expect(subject.fizz_buzz(3)).to eq('fizz')
-  # end
+  it 'App should return the string fizz when given the number 3' do
+    expect(subject.fizz_buzz(3)).to eq('fizz')
+  end
   # it 'App should return the string fizz when given the number 13' do
   #   expect(subject.fizz_buzz(13)).to eq('fizz')
   # end
@@ -26,5 +26,6 @@ describe FizzBuzz do
   #   expect(subject.fizz_buzz(546)).to eq('fizz buzz')
   # end
 end
+
 
 
