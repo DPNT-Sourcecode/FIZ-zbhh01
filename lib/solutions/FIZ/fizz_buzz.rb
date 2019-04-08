@@ -31,7 +31,7 @@ class FizzBuzz
     end
   end
 
-  # Return the string 'deluxe' if the input_number is the same
+  # Return the string deluxe if the input_number is the same
   # number repeated
   def check_same_num(input_number)
     return_str = ' '
@@ -44,6 +44,7 @@ class FizzBuzz
     end
   end
 end
+
 
 
 
