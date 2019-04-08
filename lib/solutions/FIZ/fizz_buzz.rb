@@ -14,8 +14,11 @@ class FizzBuzz
 
   def isFuzzBuzz?(number)
     p number
-    if (number % 15).zero? || ((number.to_s.include? '3') && (number.to_s.include? '5'))
+    if (number % 15).zero?)
+      if ((number.to_s.include? '3') && (number.to_s.include? '5'))
       'fizz buzz'
+    end
     end
   end
 end
+
