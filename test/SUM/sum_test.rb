@@ -17,4 +17,3 @@ class ClientTest < Minitest::Test
       Sum.new.sum(-1, 2), 'App should fail if numbers not in range'
   end
 end
-

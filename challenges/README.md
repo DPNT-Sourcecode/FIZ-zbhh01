@@ -9,5 +9,3 @@ The test has already been written and I can see that is fails
 I will now implement the code
 Note that on closer inspection the tests do not check that the numbers are in the range given
 I will extend the tests.
-
-
