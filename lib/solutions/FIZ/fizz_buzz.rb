@@ -35,6 +35,16 @@ class FizzBuzz
   # number repeated
   # Returns fake deluxe if the number is odd
   def get_deluxe_string(input_number)
+    if input_number.to_s.count.include? '3' ||
+      input_number.to_s.count.include? '5' 
+      output_string = ' deluxe'
+      if input_number.odd?
+        output_string = ' fake deluxe'
+      end
+    end
+    output_string
+  end
+  def get_old_deluxe_string(input_number)
     output_string = ' '
     check_num = input_number.to_s[0]
     number_of_check_nums = input_number.to_s.count check_num
@@ -48,4 +58,5 @@ class FizzBuzz
     output_string
   end
 end
+
 
