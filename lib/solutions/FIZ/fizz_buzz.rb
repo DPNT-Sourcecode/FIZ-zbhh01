@@ -21,17 +21,17 @@ class FizzBuzz
 
   def fizz_buzz(number)
     p 1
-    p fizz_marker = check_fizz_buzz(FIZZ_NUM, number)
+    p @fizz_marker = check_fizz_buzz(FIZZ_NUM, number)
     p 2
-    if fizz_marker
-      deluxe_marker = check_deluxe(FIZZ_NUM,number)
+    if @fizz_marker
+      @deluxe_marker = check_deluxe(FIZZ_NUM,number)
     end
-    buzz_marker = check_fizz_buzz(BUZZ_NUM, number)
-    if buzz_marker && !deluxe_marker
-      deluxe_marker = check_deluxe(BUZZ_NUM, number)
+    @buzz_marker = check_fizz_buzz(BUZZ_NUM, number)
+    if @buzz_marker && !deluxe_marker
+      @deluxe_marker = check_deluxe(BUZZ_NUM, number)
     end
-    if deluxe_marker
-        fake_marker = check_fake(number)
+    if @deluxe_marker
+        @fake_marker = check_fake(number)
     end
     make_string(number)
   end
@@ -51,24 +51,27 @@ class FizzBuzz
   end
   def make_string(number)
     output_str = ''
-    if fizz_marker
+    if @fizz_marker
       p output_str += FIZZ_STR
     end
-    if buzz_marker
+    if @buzz_marker
       output_str += ' ' +  BUZZ_STR
     end
-    if deluxe_marker
-      output_str += ' ' + DELUXE_STR
-    end
-    if fake_marker
+    if @fake_marker
       output_str += ' ' + FAKE_STR
     end
-    if !fizz_marker && !buzz_marker && !deluxe_marker && !fake_marker
+    if @deluxe_marker
+      output_str += ' ' + DELUXE_STR
+    end
+    output_str.strip!
+
+    if !@fizz_marker && !@buzz_marker && !@deluxe_marker && !@fake_marker
       output_str = number.to_s
     end
     output_str
   end
 end
+
 
 
 
