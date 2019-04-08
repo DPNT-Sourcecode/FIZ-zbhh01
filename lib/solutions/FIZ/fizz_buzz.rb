@@ -8,24 +8,11 @@ class FizzBuzz
   DELUXE_STR = 'deluxe'
   FAKE_STR = 'fake'
 
-  def initialize
-    fizz_marker = false
-    buzz_marker = false
-    deluxe_marker = false
-    fake_marker = false
-    fizz_str = 'fizz'
-    buzz_str = 'buzz'
-    deluxe_str = 'deluxe'
-    fake_str = 'fake'
-  end
-
   def fizz_buzz(number)
-    @fizz_marker = check_fizz_buzz(FIZZ_NUM, number)
-    if @fizz_marker
+    if @fizz_marker = check_fizz_buzz(FIZZ_NUM, number)
       @deluxe_marker = check_deluxe(FIZZ_NUM,number)
     end
-    @buzz_marker = check_fizz_buzz(BUZZ_NUM, number)
-    if @buzz_marker && !deluxe_marker
+    if @buzz_marker = check_fizz_buzz(BUZZ_NUM, number) && !deluxe_marker
       @deluxe_marker = check_deluxe(BUZZ_NUM, number)
     end
     if @deluxe_marker
@@ -69,6 +56,7 @@ class FizzBuzz
     output_str
   end
 end
+
 
 
 
