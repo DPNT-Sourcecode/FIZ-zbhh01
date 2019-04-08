@@ -10,3 +10,13 @@ I will now implement the code
 Note that on closer inspection the tests do not check that the numbers are in the range given
 I will extend the tests.
 #I have failed to work out how to write the test so I am moving on to refactoring
+
+
+Result is: PASSED
+Round time for SUM_R1 is ==> 34 min + 0 min penalty = 34 min total time (2071267 ms)
+Challenge completed!
+Challenge time for SUM is ==> 34 min + 0 min penalty = 34 min total time (2071267 ms)
+
+
+## Challenge 2
+
