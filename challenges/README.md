@@ -67,3 +67,15 @@ It goes like this, we are going to add a new rule:
   - A number can be "fizz", "buzz" and "deluxe" at the same time. If this happens then write "fizz buzz deluxe"
 
   Testing, will start with 77 as it is not divisible by 3 or 5, I will then test 55 and 33 and then move onto 3 digit numbers
+
+  ## Challenge 7
+  ROUND 4 - Fizz Buzz Fake Deluxe
+  The Deluxe version was a huge success ! Still, we are getting some negative feedback.
+  Turns out that people do not like odd numbers, they call them "fake".
+  The want us to change the Deluxe version so that:
+    - If a "deluxe" number is odd, we should call him "fake deluxe"
+    - A number cannot be both "deluxe" and "fake deluxe" at the same time
+    - All the previous rules are still valid
+
+    So, I need to check for odd numbers and return 'fake deluxe' if the number is deluxe
+
