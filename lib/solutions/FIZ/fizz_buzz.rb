@@ -1,8 +1,19 @@
 # noinspection RubyUnusedLocalVariable
 class FizzBuzz
   def fizz_buzz(number)
-    # check 3 fizz and deluxe and Fake
-    return_string = check_fizz_buzz(3, number, 'fizz')
+    fizz_num = 3
+    buzz_num = 5
+    fizz_marker = false
+    buzz_marker = false
+    deluxe_marker = false
+    fake_marker = false
+
+    # check fizz
+    fizz_marker = check_fizz_buzz(fizz_num, number)
+    if fizz_marker
+      deluxe_marker = check_deluxe(fizz_num,number)
+    buzz_marker = check_fizz_buzz(5, number)
+    deluxe_marker = check_deluxe(number, fizz_marker)
     return_string += check_fizz_buzz(5, number, 'buzz')
     return_string.strip!
     return_string.sub!('  ', ' ')
@@ -53,3 +64,4 @@ class FizzBuzz
     output_string
   end
 end
+
