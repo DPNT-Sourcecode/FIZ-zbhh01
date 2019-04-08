@@ -7,13 +7,12 @@ class FizzBuzz
     fbstring =
 
     fbstring = fizz(number)
-    p fbstring
     fbstring += ' ' + buzz(number)
-    p fbstring
-    if fbstring.strip!.length == 0
+    fbstring.strip!
+    if fbstring.length == 0
       number.to_s
     else
-      fbstring.strip!
+      fbstring
     end
   end
 
@@ -34,6 +33,3 @@ class FizzBuzz
     end
   end
 end
-
-
-
