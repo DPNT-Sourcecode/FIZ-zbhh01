@@ -3,10 +3,9 @@ class FizzBuzz
   def fizz_buzz(number)
     fbstring = check_fb(3,number,'fizz')
     fbstring += check_fb(5,number,' buzz')
-    num_int = number.to_s[0].to_i
     fbstring.strip!
     if number > 10
-      fbstring += check_same_num(num_int,number)
+      fbstring += check_same_num(number.to_s[0].to_i,number)
     end
     fbstring.strip!
     if fbstring.length.zero?
@@ -32,3 +31,4 @@ class FizzBuzz
     end
   end
 end
+
