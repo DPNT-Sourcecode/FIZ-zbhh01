@@ -1,12 +1,9 @@
 # noinspection RubyUnusedLocalVariable
 class FizzBuzz
-
-  attr_reader :fizz_str, :buzz_str
-
   def fizz_buzz(number)
     fbstring = fizz(number) + buzz(number)
     fbstring.strip!
-    if fbstring.length == 0
+    if fbstring.length.zero?
       number.to_s
     else
       fbstring
@@ -30,4 +27,5 @@ class FizzBuzz
     end
   end
 end
+
 
