@@ -57,5 +57,3 @@ Where:
   - @return = a String containing either the number, "fizz", "buzz" or "fizz buzz"
 
   First I will test for a number then for fizz, then buzz, then fizzbuzz and then refactor
-
-
