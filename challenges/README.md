@@ -45,15 +45,18 @@ Where:
    - If the number is a multiple of both three and five then you should write "fizz buzz"
    - If the number is not a multiple of five or three then write the number, example 1
 
- Notes:
-  - You do not have to test for illegal input.
-  - The input numbers are between 1-9999
 
- In order to complete the round you need to implement the following method:
-      fizz_buzz(Integer) -> String
+First I will test for a number then for fizz, then buzz, then fizzbuzz and then refactor
+I also ran rubocop on this one
 
- Where:
-  - param[0] = an Integer between 1-9999
-  - @return = a String containing either the number, "fizz", "buzz" or "fizz buzz"
+## Challenge 5
+FIZ_R2
+ROUND 2 - Fizz Buzz variation
+Let's change the rules a little bit:
+  - A number is "fizz" if it is divisible by 3 or if it has a 3 in it
+  - A number is "buzz" if it is divisible by 5 or if it has a 5 in it
+  - A number can be both "fizz" and "buzz" at the same time. If this happens then write "fizz buzz"
 
-  First I will test for a number then for fizz, then buzz, then fizzbuzz and then refactor
+First I comment out/remove the tests that will fail with this new requirement
+I will then write the test for 3 and then 5 and then both
+
