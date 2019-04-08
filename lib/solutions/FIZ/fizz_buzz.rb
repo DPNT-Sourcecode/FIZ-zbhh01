@@ -10,7 +10,7 @@ class FizzBuzz
     p 3
     fbstring += newstring
     fbstring.sub('  ',' ')
-
+    fbstring.strip!
     if fbstring.length.zero?
       number.to_s
     else
@@ -40,18 +40,19 @@ class FizzBuzz
   # number repeated
   # Returns fake deluxe if the number is odd
   def check_deluxe(input_number)
+    output_string = " "
     check_num = input_number.to_s[0]
     number_of_check_nums = input_number.to_s.count check_num
     p input_number
     if (input_number > 10 &&
       (input_number.to_s.length == number_of_check_nums))
-        p ' deluxe'
-        if input_number.odd?
-          ' fake deluxe'
-        end
-    else
-        ' '
+      output_string = ' deluxe'
+      if input_number.odd?
+        output_string = ' fake deluxe'
+      end
     end
+    output_string
   end
 end
+
 
