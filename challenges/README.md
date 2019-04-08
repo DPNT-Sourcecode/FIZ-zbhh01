@@ -98,3 +98,12 @@ It goes like this, we are going to add a new rule:
     Old Deluxe is all of the numbers the same
     A new deluxe is divisible by x and contains x (x is 3 or 5)
     fake deluxe is if it is deluxe AND odd
+
+
+This requires some thought
+1. x is 3 or 5
+2. If num is divisible by x then string is fizz or Buzz
+3. if num is divisible by both then string is fizz and Buzz
+4. if num contains x ( the same x it is divisible by) then it is fizz/buzz/fizz buzz deluxe
+5. if num is deluxe and odd then it is fizz/buzz/fizz buzz fake deluxe
+
