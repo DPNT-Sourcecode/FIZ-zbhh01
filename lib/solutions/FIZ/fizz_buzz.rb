@@ -48,7 +48,7 @@ class FizzBuzz
   def check_fake(check_number)
     check_number.odd?
   end
-  def make_string
+  def make_string(number)
     output_str = ''
     if fizz_marker
       output_str += FIZZ_STR
@@ -60,9 +60,13 @@ class FizzBuzz
       output_str += ' ' + DELUXE_STR
     end
     if fake_marker
-      fake_str += ' ' + FAKE_STR
+      output_str += ' ' + FAKE_STR
+    end
+    if fizz_marker + buzz_marker + deluxe_marker + fake_marker
+      output_str = number.to_s
     end
     output_str
   end
 end
+
 
