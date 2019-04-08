@@ -38,8 +38,8 @@ class FizzBuzz
     output_string = ' '
     check_num = input_number.to_s[0]
     number_of_check_nums = input_number.to_s.count check_num
-    if (input_number > 10 &&
-      (input_number.to_s.length == number_of_check_nums))
+    if input_number > 10 &&
+      (input_number.to_s.length == number_of_check_nums)
       output_string = ' deluxe'
       if input_number.odd?
         output_string = ' fake deluxe'
@@ -48,3 +48,4 @@ class FizzBuzz
     output_string
   end
 end
+
