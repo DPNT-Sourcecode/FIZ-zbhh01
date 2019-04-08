@@ -27,7 +27,7 @@ class FizzBuzz
     end
   end
   def check_fb(check_number, input_number, output_string)
-    print ('in check_fb with ${check_number}')
+    print 'in check_fb with #{check_number}'
     if (input_number % check_number).zero? || (input_number.to_s.include? check_number.to_s)
       p output_string
     else
@@ -35,6 +35,7 @@ class FizzBuzz
     end
   end
 end
+
 
 
 
