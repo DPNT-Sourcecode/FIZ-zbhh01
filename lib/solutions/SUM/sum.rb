@@ -11,8 +11,9 @@ class Sum
         return x + y
       end
     end
-    raise 'numbers need to be between 0 & 100'
+    raise_exception 'numbers need to be between 0 & 100'
   end
 
 end
+
 
