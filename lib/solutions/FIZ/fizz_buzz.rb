@@ -2,7 +2,10 @@
 class FizzBuzz
   def fizz_buzz(number)
     fbstring = get_fizz_buzz_string(number)
-    p fbstring += check_deluxe(number)
+    newstring = check_deluxe(number)
+    p fbstring
+    p newstring
+    fbstring += newstring
     fbstring.sub('  ',' ')
 
     if fbstring.length.zero?
@@ -36,9 +39,10 @@ class FizzBuzz
   def check_deluxe(input_number)
     check_num = input_number.to_s[0]
     number_of_check_nums = input_number.to_s.count check_num
+    p input_number
     if (input_number > 10 &&
       (input_number.to_s.length == number_of_check_nums))
-        ' deluxe'
+        p ' deluxe'
         if input_number.odd?
           ' fake deluxe'
         end
@@ -47,8 +51,3 @@ class FizzBuzz
     end
   end
 end
-
-
-
-
-

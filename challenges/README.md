@@ -79,5 +79,3 @@ It goes like this, we are going to add a new rule:
 
     So, I need to check for odd numbers and return 'fake deluxe' if the number is deluxe.
     Q for the client - Can a number be `fizz fake deluxe` or `buzz fake deluxe`
-
-

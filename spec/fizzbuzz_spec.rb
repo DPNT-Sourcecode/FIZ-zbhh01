@@ -53,7 +53,3 @@ describe FizzBuzz do
     expect(subject.fizz_buzz(44)).to eq('deluxe')
   end
 end
-
-
-
-
