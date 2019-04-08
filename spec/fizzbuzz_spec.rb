@@ -4,26 +4,26 @@ describe FizzBuzz do
   it 'App should return the string 1 when given the number 1' do
     expect(subject.fizz_buzz(1)).to eq('1')
   end
-  it 'App should return the string fizz  fake deluxewhen given the number 3' do
+  it 'App should return the string fizz fake deluxe when given the number 3' do
     expect(subject.fizz_buzz(3)).to eq('fizz fake deluxe')
   end
-  it 'App should return the string fizz when given the number 13' do
+  it 'App should return the string 13 when given the number 13' do
     expect(subject.fizz_buzz(13)).to eq('13')
   end
   it 'App should return the string buzz fake deluxe when given the number 5' do
     expect(subject.fizz_buzz(5)).to eq('buzz fake deluxe')
   end
-  it 'App should return the string buzz when given the number 56' do
+  it 'App should return the string 56 when given the number 56' do
     expect(subject.fizz_buzz(56)).to eq('56')
   end
-  it 'App should return the string fizz buzz when given the number 15' do
-    expect(subject.fizz_buzz(15)).to eq('fizz buzz')
+  it 'App should return the string fizz buzz fake deluxe when given the number 15' do
+    expect(subject.fizz_buzz(15)).to eq('fizz buzz fake deluxe')
   end
-  it 'App should return the string fizz buzz when given the number 53' do
-    expect(subject.fizz_buzz(53)).to eq('fizz buzz')
+  it 'App should return the 53 when given the number 53' do
+    expect(subject.fizz_buzz(53)).to eq('53')
   end
-  it 'App should return the string fizz buzz when given the number 546' do
-    expect(subject.fizz_buzz(546)).to eq('fizz buzz')
+  it 'App should return the string fizz when given the number 546' do
+    expect(subject.fizz_buzz(546)).to eq('fizz')
   end
 
   # Fake Deluxe (Mark 2)
@@ -61,5 +61,6 @@ describe FizzBuzz do
     expect(subject.fizz_buzz(4444)).to eq('4444')
   end
 end
+
 
 
