@@ -27,11 +27,11 @@ class FizzBuzz
       deluxe_marker = check_deluxe(FIZZ_NUM,number)
     end
     buzz_marker = check_fizz_buzz(BUZZ_NUM, number)
-    if !deluxe_marker
+    if buzz_marker && !deluxe_marker
       deluxe_marker = check_deluxe(BUZZ_NUM, number)
-      if deluxe_marker
+    end
+    if deluxe_marker
         fake_marker = check_fake(number)
-      end
     end
     make_string(number)
   end
@@ -69,6 +69,7 @@ class FizzBuzz
     output_str
   end
 end
+
 
 
 
