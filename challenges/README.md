@@ -79,3 +79,23 @@ It goes like this, we are going to add a new rule:
 
     So, I need to check for odd numbers and return 'fake deluxe' if the number is deluxe.
     Q for the client - Can a number be `fizz fake deluxe` or `buzz fake deluxe`
+
+    ## Challenge 8
+    ROUND 5 - Fizz Buzz Better and Improved Deluxe
+    Well done implementing the "fake deluxe" feature ! It had completely won the upper class people's hearts.
+    Now, it is time to expand to a different market. Meet the hipsters !
+    Our market research team came back with some interesting findings.
+    Turns out that the hipsters do not like our "deluxe" because all the digits are the same.
+    It is time to completely change the "deluxe" concept such that:
+      - The old rules for "deluxe" do not apply.
+      - A number is "deluxe" if it fulfils at least one of the following:
+           - is divisible by 3 AND contains a 3
+           - is divisible by 5 AND contains a 5
+      - We should still say "fake deluxe" if the "deluxe" number is odd
+      - A number can be "fizz", "buzz" and "deluxe" at the same time. If this happens then write "fizz buzz deluxe"
+      - All the previous rules for "fizz" and "buzz" are still valid
+
+    Old Deluxe is all of the numbers the same
+    A new deluxe is divisible by x and contains x
+    fake deluxe is if it is deluxe AND odd
+
