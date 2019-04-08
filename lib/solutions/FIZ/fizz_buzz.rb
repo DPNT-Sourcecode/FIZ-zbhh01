@@ -37,14 +37,10 @@ class FizzBuzz
     return_str = ' '
     check_num = input_number.to_s[0]
     if (input_number > 10 &&
-      (input_number.to_str.length == input_number.to_str.count check_num))
+      (input_number.to_str.length == (input_number.to_str.count check_num)))
         ' deluxe'
     else
         ''
     end
   end
 end
-
-
-
-
