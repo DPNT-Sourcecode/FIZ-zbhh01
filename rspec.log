@@ -1,0 +1,24 @@
+F.
+
+Failures:
+
+  1) FizzBuzz App should return the string 1 when given the number 1
+     Failure/Error:
+       def fizz(number)
+         if (number % 3).zero? || (number.to_s.include? '3')
+          fizz_str = 'fizz'
+         end
+
+     ArgumentError:
+       wrong number of arguments (0 for 1)
+     # ./lib/solutions/FIZ/fizz_buzz.rb:18:in `fizz'
+     # ./lib/solutions/FIZ/fizz_buzz.rb:11:in `fizz_buzz'
+     # ./spec/fizzbuzz_spec.rb:5:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00654 seconds (files took 0.1848 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/fizzbuzz_spec.rb:4 # FizzBuzz App should return the string 1 when given the number 1
+

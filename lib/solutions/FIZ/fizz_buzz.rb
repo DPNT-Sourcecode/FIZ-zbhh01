@@ -4,13 +4,11 @@ class FizzBuzz
   attr_reader :fizz_str, :buzz_str
 
   def fizz_buzz(number)
-    fizz_str = nil
-    buzz_str = nil
-
-    fizz_buzz(number)
+    fizz_str = ""
+    buzz_str = ""
     fizz(number)
     buzz(number)
-    if fizz.length + buzz.length == 0
+    if (fizz_str.length + buzz_str.length) == 0
       number.to_s
     else
       (fizz_str + ' ' + buzz_str).strip!
@@ -29,3 +27,4 @@ class FizzBuzz
     end
   end
 end
+
