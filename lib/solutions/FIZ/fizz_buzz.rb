@@ -2,13 +2,13 @@
 class FizzBuzz
   def fizz_buzz(number)
     fbstring = get_fizz_buzz_string(number)
-    newstring = check_deluxe(number)
+    deluxestring = get_deluxe_string(number)
     p 1
     p fbstring
     p 2
-    p newstring
+    p deluxestring
     p 3
-    fbstring += newstring
+    fbstring += deluxestring
     fbstring.sub('  ',' ')
     fbstring.strip!
     if fbstring.length.zero?
@@ -39,7 +39,7 @@ class FizzBuzz
   # Return the string deluxe if the input_number is the same
   # number repeated
   # Returns fake deluxe if the number is odd
-  def check_deluxe(input_number)
+  def get_deluxe_string(input_number)
     output_string = " "
     check_num = input_number.to_s[0]
     number_of_check_nums = input_number.to_s.count check_num
@@ -54,5 +54,6 @@ class FizzBuzz
     output_string
   end
 end
+
 
 
