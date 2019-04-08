@@ -27,4 +27,6 @@ Where:
  - @return = a String containing a message
 
  There is no test so I will write that first
+ I have chosen to use rspec instead of rake test as I am more familiar with the test nomenclature
  
+
