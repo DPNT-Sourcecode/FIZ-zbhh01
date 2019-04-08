@@ -1,7 +1,7 @@
 # noinspection RubyUnusedLocalVariable
 class FizzBuzz
   def fizz_buzz(number)
-    if (number % 15).zero?
+    if (number % 15).zero? || ((number.to_s.include? '3') && (number.to_s.include? '5'))
       'fizz buzz'
     elsif (number % 3).zero? || (number.to_s.include? '3')
       'fizz'
@@ -12,6 +12,7 @@ class FizzBuzz
     end
   end
 end
+
 
 
 
