@@ -13,9 +13,10 @@ class ClientTest < Minitest::Test
   end
 
   def test_range
-    assert_raise
+    raise_error
       p'numbers need to be between 0 & 100',
       Sum.new.sum(-1, 2), 'App should fail if numbers not in range'
   end
 end
+
 

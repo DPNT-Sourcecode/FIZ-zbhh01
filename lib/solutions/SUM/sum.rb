@@ -6,7 +6,7 @@
 class Sum
 
   def sum(x, y)
-    if inrange(x) && inrange(y)
+    if in_range(x) && in_range(y)
       return x + y
     end
     raise_exception 'numbers need to be between 0 & 100'
@@ -16,8 +16,10 @@ class Sum
     if (num > 0 && num < 100)
       return true
     else
-      print (${num} + " not in range")
+      print (num + " not in range")
       return false
     end
+  end
 end
+
 
