@@ -2,7 +2,7 @@
 class FizzBuzz
   def fizz_buzz(number)
     if (number % 15).zero?
-      'fizzbuzz'
+      'fizz buzz'
     elsif (number % 3).zero?
       'fizz'
     elsif (number % 5).zero?
@@ -12,5 +12,6 @@ class FizzBuzz
     end
   end
 end
+
 
 
