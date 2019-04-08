@@ -1,17 +1,17 @@
 # noinspection RubyUnusedLocalVariable
 class FizzBuzz
   attr_reader:
-  :fizz_num = 3,
-  :buzz_num = 5,
-  :fizz_marker = false,
-  :buzz_marker = false,
-  :deluxe_marker = false,
-  :fake_marker = false,
-  :fizz_str = 'fizz',
-  :buzz_str = 'buzz',
-  :deluxe_str = 'deluxe',
-  :fake_str = 'fake'
-  
+  :fizz_num,
+  :buzz_num,
+  :fizz_marker,
+  :buzz_marker,
+  :deluxe_marker,
+  :fake_marker,
+  :fizz_str,
+  :buzz_str,
+  :deluxe_str,
+  :fake_str
+
   def initialize
     fizz_num = 3
     buzz_num = 5
@@ -71,6 +71,3 @@ class FizzBuzz
     output_str
   end
 end
-
-
-
