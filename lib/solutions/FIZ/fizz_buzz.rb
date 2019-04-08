@@ -1,7 +1,9 @@
 # noinspection RubyUnusedLocalVariable
 class FizzBuzz
   def fizz_buzz(number)
-    isFuzzBuzz?(number)
+    if isFuzzBuzz?(number)
+      'fizz buzz'
+    end
 
     # elsif (number % 3).zero? || (number.to_s.include? '3')
     #   'fizz'
@@ -14,17 +16,10 @@ class FizzBuzz
 
   def isFuzzBuzz?(number)
     p number
-    if (number % 15).zero?
-      p 'dividable by 15'
-      if (number.to_s.include? '3')
-        p 'contains 3'
-      if (number.to_s.include? '5')
-        p 'contains 5'
-       return 'fizz buzz'
-    end
-    end
+    (number % 15).zero? ||
+      (number.to_s.include? '3') && (number.to_s.include? '5')
   end
 end
-end
+
 
 
