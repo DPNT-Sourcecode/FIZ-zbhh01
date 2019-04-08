@@ -1,9 +1,16 @@
 # noinspection RubyUnusedLocalVariable
 class FizzBuzz
   def fizz_buzz(number)
-    p fb_string = get_fizz_buzz_string(number)
-    p deluxe_string = get_deluxe_string(number)
-    p return_string = fb_string + deluxe_string
+    # check 3 fizz and deluxe and Fake
+    fbstring = check_fizz_buzz(3, number, 'fizz')
+
+
+
+
+
+    fb_string = get_fizz_buzz_string(number)
+    deluxe_string = get_deluxe_string(number)
+    return_string = fb_string + deluxe_string
     return_string.strip!
     return_string.sub!('  ', ' ')
     if return_string.length.zero?
@@ -27,10 +34,9 @@ class FizzBuzz
   # Return the string supplied if the input_number is divisible
   # by the check_number, or the check_number is contained in the
   # input_number
-  def check_fizz_buzz(check_number, input_number, input_string)
+  def basic_check_fizz_buzz(check_number, input_number, input_string)
     output_string = ' '
-    if (input_number % check_number).zero? ||
-       (input_number.to_s.include? check_number.to_s)
+    if (input_number % check_number).zero?
       output_string = input_string
     end
     output_string
@@ -52,4 +58,5 @@ class FizzBuzz
     output_string
   end
 end
+
 
