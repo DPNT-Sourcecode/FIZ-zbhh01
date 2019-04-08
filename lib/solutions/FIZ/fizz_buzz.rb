@@ -1,9 +1,8 @@
 # noinspection RubyUnusedLocalVariable
 class FizzBuzz
   def fizz_buzz(number)
-    p number
     fbstring = get_fb_string(number)
-    p fbstring
+    fbstring.strip!
     if number > 10
       fbstring += check_same_num(number.to_s[0].to_i,number)
     end
@@ -18,7 +17,7 @@ class FizzBuzz
   def get_fb_string(number)
     fbstring = check_fb(3, number, 'fizz')
     fbstring += check_fb(5, number, ' buzz')
-    fbstring.strip!
+    return fbstring
   end
 
   def check_fb(check_number, input_number, output_string)
@@ -39,6 +38,7 @@ class FizzBuzz
     end
   end
 end
+
 
 
 
