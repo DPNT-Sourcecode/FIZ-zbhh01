@@ -28,5 +28,3 @@ Where:
 
  There is no test so I will write that first
  
-
-
