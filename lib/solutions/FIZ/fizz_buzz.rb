@@ -35,12 +35,14 @@ class FizzBuzz
   # number repeated
   def check_same_num(input_number)
     if input_number > 10
-      check_num = input_number.to_s[0].to_i
-      if (input_number.to_s.length ==
-       input_number.to_s.count check_num.to_s)
-      ' deluxe'
+      check_num = input_number.to_s[0]
+      len = input_number.to_s.length
+      if (input_number.to_s.count check_num == len)
+        ' deluxe'
+      end
     else
-      ' '
+        ' '
     end
   end
 end
+
