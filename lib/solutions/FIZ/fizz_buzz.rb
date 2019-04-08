@@ -3,9 +3,7 @@ class FizzBuzz
   def fizz_buzz(number)
     fbstring = get_fb_string(number)
     fbstring.strip!
-    if number > 10
-      fbstring += check_same_num(number.to_s[0].to_i,number)
-    end
+    fbstring += check_same_num(number.to_s[0].to_i,number)
     fbstring.strip!
     if fbstring.length.zero?
       number.to_s
@@ -21,7 +19,7 @@ class FizzBuzz
   end
 
   def check_fb(check_number, input_number, output_string)
-    if (input_number > 10 && (input_number % check_number).zero?
+    if (input_number % check_number).zero?
        || (input_number.to_s.include? check_number.to_s))
       output_string
     else
@@ -29,16 +27,18 @@ class FizzBuzz
     end
   end
 
+
   def check_same_num(check_number, input_number)
-    x  = input_number.to_s.length
-    y = input_number.to_s.count check_number.to_s
-    if x == y
+    if input_number > 10 &&
+      (input_number.to_s.length ==
+       input_number.to_s.count check_number.to_s)
       ' deluxe'
     else
       ' '
     end
   end
 end
+
 
 
 
