@@ -1,15 +1,16 @@
 # noinspection RubyUnusedLocalVariable
 class FizzBuzz
   def fizz_buzz(number)
-    if number % 15 == 0
+    if (number % 15).zero?
       'fizzbuzz'
-    elsif number % 3 == 0
+    elsif (number % 3).zero?
       'fizz'
-    elsif number % 5 == 0
+    elsif (number % 5).zero?
       'buzz'
     else
       number.to_s
     end
   end
 end
+
 

@@ -1,0 +1,199 @@
+Inspecting 18 files
+CCCCCC.CCCC.WWCCCC
+
+Offenses:
+
+Rakefile:3:1: C: Layout/EmptyLines: Extra blank line detected.
+Rakefile:4:1: C: Layout/LeadingCommentSpace: Missing space after #.
+#~~~~~~~ Test
+^^^^^^^^^^^^^
+Rakefile:12:6: C: Style/HashSyntax: Use the new Ruby 1.9 hash syntax.
+task :default => :test
+     ^^^^^^^^^^^
+Rakefile:14:1: C: Layout/LeadingCommentSpace: Missing space after #.
+#~~~~~~~~~ Play
+^^^^^^^^^^^^^^^
+Rakefile:19:4: C: Layout/TrailingBlankLines: Final newline missing.
+end
+   
+Gemfile:5:1: C: Bundler/OrderedGems: Gems should be sorted in an alphabetical order within their section of the Gemfile. Gem java-properties should appear before tdl-client-ruby.
+gem 'java-properties', '0.2.0'
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test/SUM/sum_test.rb:10:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body beginning.
+test/test_helper.rb:10:81: C: Metrics/LineLength: Line is too long. [88/80]
+  require_all File.join(File.dirname(__FILE__), '..', 'lib', 'solutions', solution_name)
+                                                                                ^^^^^^^^
+test/TST/numbers_test.rb:10:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body beginning.
+test/TST/numbers_test.rb:14:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+spec/spec_helper.rb:49:1: C: Style/BlockComments: Do not use block comments.
+=begin ...
+^^^^^^
+spec/hello_spec.rb:4:1: C: Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body beginning.
+spec/hello_spec.rb:6:41: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    expect(subject.hello('Kate')).to eq("Hello, Kate!")
+                                        ^^^^^^^^^^^^^^
+lib/runner/utils.rb:4:1: C: Style/Documentation: Missing top-level module documentation comment.
+module Utils
+^^^^^^
+lib/runner/utils.rb:5:7: C: Naming/AccessorMethodName: Do not prefix reader method names with get_.
+  def get_config
+      ^^^^^^^^^^
+lib/runner/utils.rb:9:81: C: Metrics/LineLength: Line is too long. [87/80]
+      .with_colours(read_from_config_file_with_default(:tdl_use_coloured_output, true))
+                                                                                ^^^^^^^
+lib/runner/utils.rb:10:81: C: Metrics/LineLength: Line is too long. [101/80]
+      .with_recording_system_should_be_on(read_from_config_file_with_default(:tdl_require_rec, true))
+                                                                                ^^^^^^^^^^^^^^^^^^^^^
+lib/runner/utils.rb:14:7: C: Naming/AccessorMethodName: Do not prefix reader method names with get_.
+  def get_runner_config
+      ^^^^^^^^^^^^^^^^^
+lib/runner/utils.rb:16:7: C: Layout/MultilineMethodCallIndentation: Align .set_request_queue_name with .new on line 15.
+      .set_request_queue_name(read_from_config_file(:tdl_request_queue_name))
+      ^^^^^^^^^^^^^^^^^^^^^^^
+lib/runner/utils.rb:17:7: C: Layout/MultilineMethodCallIndentation: Align .set_response_queue_name with .new on line 15.
+      .set_response_queue_name(read_from_config_file(:tdl_response_queue_name))
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/runner/utils.rb:18:7: C: Layout/MultilineMethodCallIndentation: Align .set_hostname with .new on line 15.
+      .set_hostname(read_from_config_file(:tdl_hostname))
+      ^^^^^^^^^^^^^
+lib/runner/credentials_config_file.rb:3:1: C: Layout/EmptyLines: Extra blank line detected.
+lib/runner/credentials_config_file.rb:17:6: C: Style/PercentLiteralDelimiters: %w-literals should be delimited by [ and ].
+  if %w(true false).include? value.to_s
+     ^^^^^^^^^^^^^^
+lib/runner/credentials_config_file.rb:25:3: C: Style/RedundantBegin: Redundant begin block detected.
+  begin
+  ^^^^^
+lib/runner/credentials_config_file.rb:30:4: C: Layout/TrailingBlankLines: Final newline missing.
+end
+   
+lib/runner/user_input_action.rb:1:1: C: Style/Documentation: Missing top-level class documentation comment.
+class UserInputAction
+^^^^^
+lib/runner/user_input_action.rb:2:1: C: Layout/TrailingWhitespace: Trailing whitespace detected.
+lib/runner/user_input_action.rb:10:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+lib/solutions/SUM/sum.rb:6:1: C: Style/Documentation: Missing top-level class documentation comment.
+class Sum
+^^^^^
+lib/solutions/SUM/sum.rb:7:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body beginning.
+lib/solutions/SUM/sum.rb:8:11: C: Naming/UncommunicativeMethodParamName: Method parameter must be at least 3 characters long.
+  def sum(x, y)
+          ^
+lib/solutions/SUM/sum.rb:8:14: C: Naming/UncommunicativeMethodParamName: Method parameter must be at least 3 characters long.
+  def sum(x, y)
+             ^
+lib/solutions/SUM/sum.rb:9:3: C: Layout/IndentationWidth: Use 2 (not 3) spaces for indentation.
+     in_range(x) + in_range(y)
+  ^^^
+lib/solutions/SUM/sum.rb:13:5: C: Style/IfUnlessModifier: Favor modifier if usage when having a single-line body. Another good alternative is the usage of control flow &&/||.
+    if (num <= 0 && num >= 100)
+    ^^
+lib/solutions/SUM/sum.rb:13:8: C: Style/ParenthesesAroundCondition: Don't use parentheses around the condition of an if.
+    if (num <= 0 && num >= 100)
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/solutions/SUM/sum.rb:14:12: W: Lint/ParenthesesAsGroupedExpression: (...) interpreted as grouped expression.
+      raise ('numbers need to be between 0 & 100')
+           ^
+lib/solutions/SUM/sum.rb:14:13: C: Style/RedundantParentheses: Don't use parentheses around a literal.
+      raise ('numbers need to be between 0 & 100')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/solutions/SUM/sum.rb:15:5: C: Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    end
+    ^^^
+lib/solutions/SUM/sum.rb:16:5: C: Style/RedundantReturn: Redundant return detected.
+    return num
+    ^^^^^^
+lib/solutions/CHK/checkout.rb:3:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body beginning.
+lib/solutions/CHK/checkout.rb:4:16: W: Lint/UnusedMethodArgument: Unused method argument - skus. If it's necessary, use _ or _skus as an argument name to indicate that it won't be used. You can also write as checkout(*) if you want the method to accept any arguments but don't care about them.
+  def checkout(skus)
+               ^^^^
+lib/solutions/CHK/checkout.rb:7:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+lib/solutions/HLO/hello.rb:3:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body beginning.
+lib/solutions/HLO/hello.rb:5:5: C: Style/RedundantReturn: Redundant return detected.
+    return "Hello, " + friend_name + "!"
+    ^^^^^^
+lib/solutions/HLO/hello.rb:5:12: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    return "Hello, " + friend_name + "!"
+           ^^^^^^^^^
+lib/solutions/HLO/hello.rb:5:38: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    return "Hello, " + friend_name + "!"
+                                     ^^^
+lib/solutions/HLO/hello.rb:8:1: C: Layout/EmptyLines: Extra blank line detected.
+lib/solutions/HLO/hello.rb:8:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+lib/solutions/TST/two.rb:3:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body beginning.
+lib/solutions/TST/two.rb:7:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+lib/solutions/TST/one.rb:3:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body beginning.
+lib/solutions/TST/one.rb:7:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+lib/send_command_to_server.rb:10:1: C: Style/MixinUsage: include is used at the top level. Use inside class or module.
+include Utils
+^^^^^^^^^^^^^
+lib/send_command_to_server.rb:20:81: C: Metrics/LineLength: Line is too long. [85/80]
+#      Run this file from the IDE. Set the working directory to the root of the repo.
+                                                                                ^^^^^
+lib/send_command_to_server.rb:59:5: C: Layout/MultilineMethodCallIndentation: Align .set_config with .new on line 58.
+    .set_config(Utils.get_runner_config)
+    ^^^^^^^^^^^
+lib/send_command_to_server.rb:60:5: C: Layout/MultilineMethodCallIndentation: Align .with_solution_for with .new on line 58.
+    .with_solution_for('sum', -> (x, y) {Sum.new.sum(x, y)})
+    ^^^^^^^^^^^^^^^^^^
+lib/send_command_to_server.rb:60:31: C: Layout/SpaceInLambdaLiteral: Do not use spaces between -> and ( in lambda literals.
+    .with_solution_for('sum', -> (x, y) {Sum.new.sum(x, y)})
+                              ^^^^^^^^^
+lib/send_command_to_server.rb:60:42: C: Layout/SpaceInsideBlockBraces: Space missing inside {.
+    .with_solution_for('sum', -> (x, y) {Sum.new.sum(x, y)})
+                                         ^
+lib/send_command_to_server.rb:60:59: C: Layout/SpaceInsideBlockBraces: Space missing inside }.
+    .with_solution_for('sum', -> (x, y) {Sum.new.sum(x, y)})
+                                                          ^
+lib/send_command_to_server.rb:61:5: C: Layout/MultilineMethodCallIndentation: Align .with_solution_for with .new on line 58.
+    .with_solution_for('hello', -> (p) {Hello.new.hello(p)})
+    ^^^^^^^^^^^^^^^^^^
+lib/send_command_to_server.rb:61:33: C: Layout/SpaceInLambdaLiteral: Do not use spaces between -> and ( in lambda literals.
+    .with_solution_for('hello', -> (p) {Hello.new.hello(p)})
+                                ^^^^^^
+lib/send_command_to_server.rb:61:41: C: Layout/SpaceInsideBlockBraces: Space missing inside {.
+    .with_solution_for('hello', -> (p) {Hello.new.hello(p)})
+                                        ^
+lib/send_command_to_server.rb:61:59: C: Layout/SpaceInsideBlockBraces: Space missing inside }.
+    .with_solution_for('hello', -> (p) {Hello.new.hello(p)})
+                                                          ^
+lib/send_command_to_server.rb:62:5: C: Layout/MultilineMethodCallIndentation: Align .with_solution_for with .new on line 58.
+    .with_solution_for('fizz_buzz', -> (p) {FizzBuzz.new.fizz_buzz(p)})
+    ^^^^^^^^^^^^^^^^^^
+lib/send_command_to_server.rb:62:37: C: Layout/SpaceInLambdaLiteral: Do not use spaces between -> and ( in lambda literals.
+    .with_solution_for('fizz_buzz', -> (p) {FizzBuzz.new.fizz_buzz(p)})
+                                    ^^^^^^
+lib/send_command_to_server.rb:62:45: C: Layout/SpaceInsideBlockBraces: Space missing inside {.
+    .with_solution_for('fizz_buzz', -> (p) {FizzBuzz.new.fizz_buzz(p)})
+                                            ^
+lib/send_command_to_server.rb:62:70: C: Layout/SpaceInsideBlockBraces: Space missing inside }.
+    .with_solution_for('fizz_buzz', -> (p) {FizzBuzz.new.fizz_buzz(p)})
+                                                                     ^
+lib/send_command_to_server.rb:63:5: C: Layout/MultilineMethodCallIndentation: Align .with_solution_for with .new on line 58.
+    .with_solution_for('checkout', -> (p) {Checkout.new.checkout(p)})
+    ^^^^^^^^^^^^^^^^^^
+lib/send_command_to_server.rb:63:36: C: Layout/SpaceInLambdaLiteral: Do not use spaces between -> and ( in lambda literals.
+    .with_solution_for('checkout', -> (p) {Checkout.new.checkout(p)})
+                                   ^^^^^^
+lib/send_command_to_server.rb:63:44: C: Layout/SpaceInsideBlockBraces: Space missing inside {.
+    .with_solution_for('checkout', -> (p) {Checkout.new.checkout(p)})
+                                           ^
+lib/send_command_to_server.rb:63:68: C: Layout/SpaceInsideBlockBraces: Space missing inside }.
+    .with_solution_for('checkout', -> (p) {Checkout.new.checkout(p)})
+                                                                   ^
+lib/send_command_to_server.rb:64:5: C: Layout/MultilineMethodCallIndentation: Align .create with .new on line 58.
+    .create
+    ^^^^^^^
+lib/send_command_to_server.rb:67:5: C: Layout/MultilineMethodCallIndentation: Use 2 (not 4) spaces for indenting an expression spanning multiple lines.
+    .for_runner(runner)
+    ^^^^^^^^^^^
+lib/send_command_to_server.rb:68:5: C: Layout/MultilineMethodCallIndentation: Use 2 (not 4) spaces for indenting an expression spanning multiple lines.
+    .with_config(Utils.get_config)
+    ^^^^^^^^^^^^
+lib/send_command_to_server.rb:69:5: C: Layout/MultilineMethodCallIndentation: Use 2 (not 4) spaces for indenting an expression spanning multiple lines.
+    .with_action_provider(UserInputAction.new(ARGV))
+    ^^^^^^^^^^^^^^^^^^^^^
+lib/send_command_to_server.rb:70:5: C: Layout/MultilineMethodCallIndentation: Use 2 (not 4) spaces for indenting an expression spanning multiple lines.
+    .start
+    ^^^^^^
+
+18 files inspected, 76 offenses detected
