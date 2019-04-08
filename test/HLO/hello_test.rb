@@ -8,11 +8,8 @@ require_solution 'HLO'
 
 class ClientTest < Minitest::Test
 
-  def hlo_test
+  def hello_test
   ljsk fkfbhjbflj
-    assert_equal 'hello Kate', HLO.new.hello('Kate'), 'App should say hello to Kate'
+    assert_equal 'hello Kate', Hello.new.hello('Kate'), 'App should say hello to Kate'
   end
 end
-
-
-
