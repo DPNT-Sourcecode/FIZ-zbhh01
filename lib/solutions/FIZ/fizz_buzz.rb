@@ -1,7 +1,7 @@
 # noinspection RubyUnusedLocalVariable
 class FizzBuzz
 
-  attr_reader:fizz_num, buzz_num
+  attr_reader :fizz_str, :buzz_str
 
   def fizz_buzz(number)
     fizz_str = nil
@@ -17,29 +17,15 @@ class FizzBuzz
     end
   end
 
-  def fizz_buzz(number)
-    (number % 15).zero? ||
-      (number.to_s.include? '3') && (number.to_s.include? '5')
-
-  end
-
   def fizz(number)
     if (number % 3).zero? || (number.to_s.include? '3')
-     fizz_str
+     fizz_str = 'fizz'
     end
   end
 
-  def buzz?(number)
+  def buzz(number)
     if (number % 5).zero? || (number.to_s.include? '5')
       buzz_str = 'buzz'
     end
   end
 end
-
-
-
-
-
-
-
-
