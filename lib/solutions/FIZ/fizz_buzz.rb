@@ -4,11 +4,8 @@ class FizzBuzz
     fb_string = get_fizz_buzz_string(number)
     deluxe_string = get_deluxe_string(number)
     return_string = fb_string + deluxe_string
-    return_string.sub(" ", "*")
-    p 1
-    p return_string
-    p 2
     return_string.strip!
+    return_string.sub!("  ", " ")
     if return_string.length.zero?
       number.to_s
     else
@@ -31,7 +28,7 @@ class FizzBuzz
        (input_number.to_s.include? check_number.to_s)
       output_string = input_string
     end
-    p output_string
+    output_string
   end
 
   # Return the string deluxe if the input_number is the same
@@ -41,7 +38,7 @@ class FizzBuzz
     output_string = " "
     check_num = input_number.to_s[0]
     number_of_check_nums = input_number.to_s.count check_num
-    p input_number
+    input_number
     if (input_number > 10 &&
       (input_number.to_s.length == number_of_check_nums))
       output_string = ' deluxe'
@@ -52,6 +49,7 @@ class FizzBuzz
     output_string
   end
 end
+
 
 
 
