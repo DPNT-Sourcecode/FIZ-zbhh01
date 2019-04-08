@@ -22,13 +22,15 @@ class FizzBuzz
   end
   def check_same_num(check_number, input_number)
     x  = input_number.to_s.length
-    y = input_number.count check_number.to_s
+    y = input_number.to_s.count check_number.to_s
     if x == y
       ' Deluxe'
     else
       ' '
     end
+  end
 end
+
 
 
 
