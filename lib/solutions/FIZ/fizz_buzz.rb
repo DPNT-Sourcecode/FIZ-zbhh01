@@ -27,7 +27,7 @@ class FizzBuzz
        (input_number.to_s.include? check_number.to_s)
       output_string
     else
-      ''
+      ' '
     end
   end
 
@@ -47,5 +47,6 @@ class FizzBuzz
     end
   end
 end
+
 
 
