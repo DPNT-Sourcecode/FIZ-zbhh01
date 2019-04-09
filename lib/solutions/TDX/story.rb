@@ -1,8 +1,8 @@
 # noinspection RubyUnusedLocalVariable
-class Sum
+class Story
 
-  def sum(x, y)
-    x + y
+  def read
+    "Once upon a time"
   end
 
 end
