@@ -101,8 +101,9 @@ It goes like this, we are going to add a new rule:
 
 
 This requires some thought
-1. x is 3 or 5
-2. If num is divisible by x then string is fizz or Buzz
-3. if num is divisible by both then string is fizz and Buzz
-4. if num contains x ( the same x it is divisible by) then it is fizz/buzz/fizz buzz deluxe
-5. if num is deluxe and odd then it is fizz/buzz/fizz buzz fake deluxe
+FIZZ if divisible by 3 OR contains 3
+BUZZ if divisible by 5 OR contains 5
+DELUXE if divisible by 3 AND contains 3
+DELUXE if divisible by 5 or contains 5
+FAKE if odd
+
