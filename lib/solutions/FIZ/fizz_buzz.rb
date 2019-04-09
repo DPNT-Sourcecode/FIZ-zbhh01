@@ -9,12 +9,15 @@ class FizzBuzz
   FAKE_STR = 'fake'
 
   def fizz_buzz(number)
-    @fizz_marker = check_divisible(FIZZ_NUM, number)
-    @buzz_marker = check_divisible(BUZZ_NUM, number)
-    if @fizz_marker
-      @deluxe_marker = check_contains(FIZZ_NUM, number)
-    if !deluxe_marker && @buzz_marker
-      @deluxe_marker = check_contains(BUZZ_NUM, number)
+    @fizz_marker = check_divisible(FIZZ_NUM, number) ||
+      check_contains(FIZZ_NUM, number)
+    @buzz_marker = check_divisible(BUZZ_NUM, number) ||
+      check_contains(BUZZ_NUM, number)
+    @deluxe_marker = check_divisible(FIZZ_NUM, number) &&
+      check_contains(FIZZ_NUM, number)
+    if !deluxe_marker
+      @deluxe_marker = check_divisible(BUZZ_NUM, number) &&
+          check_contains(BUZZ_NUM, number)
     end
     if @deluxe_marker
       @fake_marker = check_fake(number)
@@ -57,6 +60,3 @@ class FizzBuzz
     output_str
   end
 end
-
-
-

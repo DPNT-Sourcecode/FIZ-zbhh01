@@ -106,4 +106,3 @@ BUZZ if divisible by 5 OR contains 5
 DELUXE if divisible by 3 AND contains 3
 DELUXE if divisible by 5 or contains 5
 FAKE if odd
-
