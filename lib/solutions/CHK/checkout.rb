@@ -7,8 +7,12 @@ class Checkout
   PRICE.freeze
   QTY = 0
   QTY.freeze
+  FREEBIE = 3
+  FREEBIE.freeze
   SPECIAL_OFFER_CODE = 'SO'
   SPECIAL_OFFER_CODE.freeze
+  FREEBIE_CODE = -1
+  FREEBIE_CODE.freeze
 
   def checkout(skus)
     set_up
@@ -20,7 +24,9 @@ class Checkout
 
   def set_up
     @item_prices = { 'A' => 50, 'B' => 30, 'C' => 20, 'D' => 15, 'E' => 40 }
-    @special_offers = { 'A' => [[5, 200],[3, 130]], 'B' => [[2, 45]] }
+    @special_offers = { 'A' => [[5, 200],[3, 130]],
+                        'B' => [[2, 45]],
+                        'E' => [2,FREEBIE_CODE,'B'] }
     @total_price = 0
     @sorted_basket = []
   end
@@ -45,17 +51,22 @@ class Checkout
   def basic_items(basket)
     @item_prices.each do |item, price|
       item_array = []
-      item_array[ITEM] = item
       item_array[QTY] = basket.chars.count(item)
-      item_array[PRICE] = price
-      @sorted_basket << item_array
+      if item_array[QTY] > 0
+        item_array[ITEM] = item
+        item_array[PRICE] = price
+        @sorted_basket << item_array
+      end
     end
   end
 
   def check_specials
     x = 0
+    @sorted_basket.length
     while x < @sorted_basket.length &&
       @sorted_basket[x][ITEM] != 'SO'
+      print 'in check specials, checking '
+      p @sorted_basket[x]
       if @special_offers.include?(@sorted_basket[x][ITEM])
         calc_all_special_offers(x)
       end
@@ -65,35 +76,47 @@ class Checkout
 
 # By now I should have an item and a list of special offers
   def calc_all_special_offers(num)
-    # item = @sorted_basket[num][ITEM]
-    # offers_list = @special_offers[item]
-    # x = 0
-    # while x < offers_list.length
-    # if @special_offers.include?(item)
-    #   calc_special(num,offers_list[x])
-    # end
+    check_freebies(num)
+    calc_discounts(num)
   end
 
-  def calc_special(num,special_offers_list)
+  def check_freebies(num)
+    p ' check_freebies'
+  end
+
+  def calc_discounts(num)
+    print ' In calc_discounts '
+    p num
+    p @sorted_basket[num]
+    item = @sorted_basket[num][ITEM]
+    print 'Item is '
+    p item
+    offers_list = @special_offers[item]
+    p offers_list
     x = 0
-    while x < special_offers_list.length do
-      update_basket(num,special_offers_list[x])
+    while x < offers_list.length
+      if @sorted_basket[num][QTY] >= offers_list[x][QTY]
+        update_basket(num, offers_list[x])
+      end
+      x += 1
     end
   end
 
   def update_basket(num, special_offer)
     p 'in update basket'
     p num
-    p special_offers
+    p special_offer
     qty = @sorted_basket[num][QTY]
+    print 'quantity is '
+    p qty
     offer_item = []
-    x = qty.divmod(special_offers[QTY])
-    p 'x is ' + x
+    x = qty / special_offer[QTY]
+    y = qty % special_offer[QTY]
     offer_item[ITEM] = SPECIAL_OFFER_CODE
-    offer_item[PRICE] = special_offers[PRICE]
-    offer_item[QTY] = x[0]
+    offer_item[PRICE] = special_offer[PRICE]
+    offer_item[QTY] = x
     @sorted_basket << offer_item
-    @sorted_basket[num][QTY] = x[1]
+    @sorted_basket[num][QTY] = y
   end
 
   def add_up_basket
@@ -105,5 +128,3 @@ class Checkout
     @total_price
   end
 end
-
-
